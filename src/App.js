@@ -5,14 +5,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Display from "./components/Display";
+import Error from "./components/Error";
 import FormComponent from "./components/FormComponent";
 
 function App() {
   let router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" element={<FormComponent />} />
-        <Route path="/display" element={<Display />} />
+        <Route path="/" element={<FormComponent />} errorElement={<Error />} />
+        <Route path="/display" element={<Display />} errorElement={<Error />} />
       </>
     )
   );

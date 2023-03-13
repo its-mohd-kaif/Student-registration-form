@@ -20,7 +20,7 @@ function Display() {
         </thead>
         <tbody>
           {/* Display Using Map */}
-          {JSON.parse(localStorage.getItem("data")).map((val, index) => (
+          {JSON.parse(localStorage.getItem("form")).map((val, index) => (
             <tr>
               <td>{index + 1}</td>
               <td>{val.name}</td>

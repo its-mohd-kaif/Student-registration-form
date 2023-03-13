@@ -96,13 +96,13 @@ function FormComponent() {
       };
       setMessage("");
       let tempArr = [];
-      if (JSON.parse(localStorage.getItem("data")) !== null) {
-        tempArr = JSON.parse(localStorage.getItem("data"));
+      if (JSON.parse(localStorage.getItem("form")) !== null) {
+        tempArr = JSON.parse(localStorage.getItem("form"));
       }
       // Push Into Array
       tempArr.push(obj);
       // Set Into Local Storage
-      localStorage.setItem("data", JSON.stringify(tempArr));
+      localStorage.setItem("form", JSON.stringify(tempArr));
       navigate("/display");
     }
   };
